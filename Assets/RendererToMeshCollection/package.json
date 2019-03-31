@@ -1,0 +1,10 @@
+{
+    "name": "com.wotakuro.rendercollection",
+    "displayName": "rendercollection",
+    "version": "0.1.0",
+    "unity": "2018.3",
+    "description": "Renderer to PackageCollection",
+    "keywords": ["rendercollection"],
+    "category": "",
+    "dependencies": { }
+}

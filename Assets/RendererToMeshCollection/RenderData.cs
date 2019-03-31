@@ -63,6 +63,38 @@ namespace RendererCollection
                 drawImp(this.mesh, this.materials[i], i, ref matrix);
              }
         }
+        private bool IsEnable
+        {
+            get
+            {
+                if(meshTransform.gameObject.activeInHierarchy)
+                {
+                    return false;
+                }
+                switch (type)
+                {
+                    case RendererType.Mesh:
+                        if( !this.meshRenderer.enabled)
+                        {
+                            return false;
+                        }
+                        break;
+                    case RendererType.SkinnedMesh:
+                        if (!this.skinnedMeshRenderer.enabled)
+                        {
+                            return false;
+                        }
+                        break;
+                    case RendererType.Particle:
+                        if (!this.skinnedMeshRenderer.enabled)
+                        {
+                            return false;
+                        }
+                        break;
+                }
+                return true;
+            }
+        }
 
         private void UpdateBake()
         {
